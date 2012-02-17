@@ -7,6 +7,8 @@ class FacebookController < ApplicationController
   
   def index
     @likes_by_category = current_user.likes_by_category
+    @friends = %w[dude cool yay monster truck]
+    # @friends = current_user.get_friends
   end
 
   def login
