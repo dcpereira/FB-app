@@ -8,9 +8,10 @@ class FacebookController < ApplicationController
   def index
     @likes_by_category = current_user.likes_by_category
     @friends = current_user.get_friends
+    # @friends=[{"name"=>"Xavier Malcolm Gomes", "id"=>"285001398"}, {"name"=>"Farha Iqbal", "id"=>"502122425"}]
   end
 
-  def login
+  def login    
   end
 
   protected
