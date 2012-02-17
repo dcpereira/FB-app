@@ -4,3 +4,6 @@
   %ul
     - likes.each do |like|
       %li= like['name']
+- @friends.each do |friend|
+	%select
+		%option= friend['name']
