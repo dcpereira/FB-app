@@ -14,6 +14,7 @@ module FacebookHelper
     @friends.each do |f|
       friends << "#{f['name']}"
     end
-    select_tag('friend', options_for_select(friends))  
+    select_tag('friend', options_for_select(friends), {:id => 'friend_selector'})  
   end
 end
+
