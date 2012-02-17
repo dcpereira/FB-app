@@ -4,4 +4,5 @@
   %ul
     - likes.each do |like|
       %li= like['name']
-%pre= @friends
+- @friends.each do |friend|
+	%pre= friend
