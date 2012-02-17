@@ -7,14 +7,12 @@ module FacebookHelper
       :size => size,
       :onlogin => 'location = "/"'})
   end
-  
-  
+
   def friend_select
     friends = []
     @friends.each do |f|
-      friends << "#{f['name']}"
-    end
-    select_tag('friend', options_for_select(friends), {:id => 'friend_selector'})  
+      friends << [f['name'], f['id']]
+    end 
+      select_tag 'friend', options_for_select(friends), {:id => 'friend_selector'}
   end
 end
-
