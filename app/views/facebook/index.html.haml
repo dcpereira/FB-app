@@ -1,7 +1,3 @@
-%h2 Your "likes":
-- @likes_by_category.each do |category, likes|
-  %h3= category
-  %ul
-    - likes.each do |like|
-      %li= like['name']
+%h2 Friend Stats
+%p Please select a friend to analyze:
 = friend_select
