@@ -15,6 +15,6 @@ class User
   end
   
   def get_friends
-    @frineds ||= @graph.get_connections(uid,"friends").sort
+    @friends ||= @graph.get_connections(uid,'friends')
   end
 end
