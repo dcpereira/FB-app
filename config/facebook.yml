@@ -2,8 +2,8 @@ development:
   app_id: "232072346882570"
   secret_key: "1219a720866ffb4fc13532dfcc6b6405"
 test:
-  app_id: REPLACE WITH YOUR APP ID
-  secret_key: REPLACE WITH YOUR SECRET KEY
+  app_id: "232072346882570"
+  secret_key: "1219a720866ffb4fc13532dfcc6b6405"
 production:
-  app_id: REPLACE WITH YOUR APP ID
-  secret_key: REPLACE WITH YOUR SECRET KEY
+  app_id: "232072346882570"
+  secret_key: "1219a720866ffb4fc13532dfcc6b6405"
