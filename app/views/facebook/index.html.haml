@@ -7,4 +7,4 @@
 
 %select
 - @friends.each do |friend|
-  %option= friend['name']
+  %option= @friends.each {|friend| friend['name']}
