@@ -316,3 +316,115 @@ Started GET "/facebook/login" for 127.0.0.1 at Fri Feb 17 12:27:04 +0000 2012
   Processing by FacebookController#login as HTML
 Rendered facebook/login.html.haml within layouts/application (4.4ms)
 Completed 200 OK in 8ms (Views: 7.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Feb 17 17:48:37 +0000 2012
+  Processing by FacebookController#index as HTML
+Redirected to http://localhost:3000/facebook/login
+Completed 302 Found in 1ms
+
+
+Started GET "/facebook/login" for 127.0.0.1 at Fri Feb 17 17:48:37 +0000 2012
+  Processing by FacebookController#login as HTML
+Rendered facebook/login.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 9ms (Views: 8.9ms)
+
+
+Started GET "/facebook/login" for 127.0.0.1 at Fri Feb 17 17:52:07 +0000 2012
+  Processing by FacebookController#login as HTML
+Rendered facebook/login.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 10ms (Views: 9.4ms)
+
+
+Started GET "/facebook/login" for 127.0.0.1 at Fri Feb 17 17:52:58 +0000 2012
+  Processing by FacebookController#login as HTML
+Rendered facebook/login.html.haml within layouts/application (1.8ms)
+Completed   in 5ms
+
+ActionView::Template::Error (undefined method `delete' for 1:Fixnum):
+    4: 
+    5: - @friends.each do |friend|
+    6:   %a{:class => "friend", :href=>"#"}= friend['name']
+    7:   = friend_select
+  app/helpers/facebook_helper.rb:17:in `friend_select'
+  app/views/facebook/login.html.haml:7:in `_app_views_facebook_login_html_haml__1502670738_2180345340_0'
+  app/views/facebook/login.html.haml:5:in `each'
+  app/views/facebook/login.html.haml:5:in `_app_views_facebook_login_html_haml__1502670738_2180345340_0'
+
+Rendered /Users/davidpereira/.rvm/gems/ree-1.8.7-2011.03@wf/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/davidpereira/.rvm/gems/ree-1.8.7-2011.03@wf/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered /Users/davidpereira/.rvm/gems/ree-1.8.7-2011.03@wf/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.3ms)
+
+
+Started GET "/facebook/login" for 127.0.0.1 at Fri Feb 17 17:56:57 +0000 2012
+  Processing by FacebookController#login as HTML
+Rendered facebook/login.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 9ms (Views: 8.6ms)
+
+
+Started GET "/facebook/login" for 127.0.0.1 at Fri Feb 17 17:57:25 +0000 2012
+  Processing by FacebookController#login as HTML
+Rendered facebook/login.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 9ms (Views: 9.0ms)
+
+
+Started GET "/facebook/login" for 127.0.0.1 at Fri Feb 17 18:00:59 +0000 2012
+  Processing by FacebookController#login as HTML
+Rendered facebook/login.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 8ms (Views: 7.8ms)
+
+
+Started GET "/facebook/login" for 127.0.0.1 at Fri Feb 17 18:01:04 +0000 2012
+  Processing by FacebookController#login as HTML
+Rendered facebook/login.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 9ms (Views: 9.0ms)
+
+
+Started GET "/facebook/login" for 127.0.0.1 at Fri Feb 17 18:19:48 +0000 2012
+  Processing by FacebookController#login as HTML
+Rendered facebook/login.html.haml within layouts/application (58.1ms)
+Completed 200 OK in 62ms (Views: 61.4ms)
+
+
+Started GET "/facebook/login" for 127.0.0.1 at Fri Feb 17 18:20:29 +0000 2012
+  Processing by FacebookController#login as HTML
+Rendered facebook/login.html.haml within layouts/application (0.4ms)
+Completed   in 4ms
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %p and nested within it.):
+    1: %h2 Please Login
+    2: %p Please log into Facebook in order to get started!
+    3:   = friend_select
+  app/views/facebook/login.html.haml:3
+
+Rendered /Users/davidpereira/.rvm/gems/ree-1.8.7-2011.03@wf/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /Users/davidpereira/.rvm/gems/ree-1.8.7-2011.03@wf/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered /Users/davidpereira/.rvm/gems/ree-1.8.7-2011.03@wf/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (7.0ms)
+
+
+Started GET "/facebook/login" for 127.0.0.1 at Fri Feb 17 18:20:40 +0000 2012
+  Processing by FacebookController#login as HTML
+Rendered facebook/login.html.haml within layouts/application (0.4ms)
+Completed   in 4ms
+
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %p and nested within it.):
+    1: %h2 Please Login
+    2: %p Please log into Facebook in order to get started!
+    3:   = friend_select
+  app/views/facebook/login.html.haml:3
+
+Rendered /Users/davidpereira/.rvm/gems/ree-1.8.7-2011.03@wf/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /Users/davidpereira/.rvm/gems/ree-1.8.7-2011.03@wf/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.9ms)
+Rendered /Users/davidpereira/.rvm/gems/ree-1.8.7-2011.03@wf/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.8ms)
+
+
+Started GET "/facebook/login" for 127.0.0.1 at Fri Feb 17 18:20:56 +0000 2012
+  Processing by FacebookController#login as HTML
+Rendered facebook/login.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 8ms (Views: 8.1ms)
+
+
+Started GET "/facebook/login" for 127.0.0.1 at Fri Feb 17 18:21:13 +0000 2012
+  Processing by FacebookController#login as HTML
+Rendered facebook/login.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 8ms (Views: 7.9ms)
