@@ -20,10 +20,7 @@ class User
   
   def get_friend_feed friend_id
     @friend_feed = []
-    @feed ||= graph.get_connections(friend_id, "feed")
-    @feed.each do |f|
-    @friend_feed  << f
-    end
+    @feed ||= graph.get_connections(uid, "feed")
      # @graph.get_connections(friend_id, "feed")
     
   end
