@@ -20,7 +20,7 @@ class FacebookController < ApplicationController
     @friend_feed = friend_uid
     
     respond_to do |format|
-      format.js {render :layout=>false}
+      format.js {render :partial=> 'fetch_friend_posts'}
     end
     
 
