@@ -18,6 +18,11 @@ class FacebookController < ApplicationController
     friend_uid = params[:selected_friend]
     # @friend_feed = current_user.get_feed friend_uid
     @friend_feed = friend_uid
+    
+    respond_to do |format|
+      format.js {render :layout=>false}
+    end
+    
 
   end
 
