@@ -18,8 +18,9 @@ class User
     @friends ||= @graph.get_connections(uid,'friends')
   end
   
-  def get_friend_feed friend_uid
-    @friend_feed ||= @graph.get_object(friend_uid)
+  def get_friend_feed friend_id
+    # @friend_feed ||= @graph.get_connections(friend_uid, 'feed')
+     @friend_feed ||= @graph.get_connections("me", "feed/#{friend_id}")
     
   end
 end
