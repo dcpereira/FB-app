@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>Credit Limit Console</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<meta http-equiv="Content-Language" content="en-GB" />
+    <%= stylesheet_link_tag 'application', 'facebook' %>
+		<%= javascript_include_tag 'facebook' %>
+  </head>
+	<body>
+		 <%= facebook_login_button('large') %>
+		<h1> WildFire Programming Challenge </h1>
+		<div id='content'>
+			<div id='fb-root'>
+				<%= yield %>
+			</div>
+		</div>
+	</body>
+</html>
+
+
+<script type="text/javascript">
+	window.fbAsyncInit = function() {
+	FB.init({appId: 232072346882570, status: true, cookie: true, xfbml: true});
+	};
+	(function() {
+	var e = document.createElement('script');
+	e.type = 'text/javascript';
+	e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+	e.async = true;
+	document.getElementById('fb-root').appendChild(e);
+	}());
+</script>
