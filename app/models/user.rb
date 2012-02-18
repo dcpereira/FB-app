@@ -19,7 +19,7 @@ class User
   end
   
   def get_friend_feed friend
-    @friend_feed ||= @graph.get_connections(friend ,'feed')
+    @friend_feed ||= @graph.get_connections('Roger','feed')
     
   end
 end
