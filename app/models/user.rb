@@ -15,11 +15,11 @@ class User
   end
   
   def get_friends
-    @friends ||= graph.get_connections(uid,'friends')
+    @friends ||= @graph.get_connections(uid,'friends')
   end
   
   def get_friend_feed friend_id
-    @friend_feed ||= graph.get_connections(uid, "feed/#{friend_id}")
+    @friend_feed ||= @graph.get_connections(friend_id, "posts")
      # @graph.get_connections(friend_id, "feed")
     
   end
