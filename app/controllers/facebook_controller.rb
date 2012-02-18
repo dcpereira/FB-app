@@ -30,7 +30,7 @@ class FacebookController < ApplicationController
       end
     end
     
-    def fetch_posts
+    def fetch_friend_posts
       friend_uid = params[:selected_friend]
       @friend_feed = current_user.get_feed friend_uid
     end
