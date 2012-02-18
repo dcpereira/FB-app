@@ -29,6 +29,11 @@ class FacebookController < ApplicationController
         redirect_to :action => :login
       end
     end
+    
+    def fetch_posts
+      friend_uid = params[:selected_friend]
+      @friend_feed = current_user.get_feed friend_uid
+    end
 
     def facebook_auth
       @oauth = Koala::Facebook::OAuth.new(FACEBOOK_APP_ID, FACEBOOK_SECRET_KEY)
