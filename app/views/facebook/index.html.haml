@@ -1,6 +1,6 @@
 %h2 Friend Stats
 %p Please select a friend to analyze:
 = friend_select
-= button_tag("Analyze Friend's Wall", :id => 'analyze_button')
+= button_to("Analyze Friend's Wall",{}, {:id => 'analyze_button'})
 .posts_content
   =render :partial => "fetch_friend_posts"
