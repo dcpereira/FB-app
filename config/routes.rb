@@ -53,6 +53,7 @@ FbBase::Application.routes.draw do
   match 'facebook/:action' => 'facebook', :as => :facebook
   post 'facebook/fetch_posts' => 'facebook/fetch_posts'
   post 'facebook/fetch_posts/:selected_friend' => 'facebook/fetch_posts'
+  get 'facebook/fetch_posts/:selected_friend' => 'facebook/fetch_posts'
   root :to => 'facebook#index'
 
   # See how all your routes lay out with "rake routes"
