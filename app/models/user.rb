@@ -19,6 +19,6 @@ class User
   end
   
   def get_friend_feed friend_uid
-    @friend_feed ||= @graph.get_connections(friend_uid,'comment')
+    @friend_feed ||= @graph.get_connections(friend_uid,'feed')
   end
 end
