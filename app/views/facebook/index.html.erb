@@ -5,3 +5,8 @@
 	<div id='posts_content'>
 		<%= render :partial => "fetch_friend_posts" %>
 	</div>
+	
+	<% @frends.each do |f|%>
+	<p><%= f %></p>
+		
+		<% end %>
