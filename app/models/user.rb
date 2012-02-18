@@ -19,7 +19,11 @@ class User
   end
   
   def get_friend_feed friend_id
-    @friend_feed ||= @graph.get_connections(friend_uid, 'feed')
+    friend_feed ||= graph.get_connections(friend_id, 'feed')
+    @friend_feed =[]
+    @friend_feed.each do |f|
+      @friend_feed << f['comment']
+    end
      # @graph.get_connections(friend_id, "feed")
     
   end
