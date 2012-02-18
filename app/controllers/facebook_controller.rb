@@ -13,6 +13,11 @@ class FacebookController < ApplicationController
 
   def login    
   end
+  
+  def fetch_posts
+    friend_uid = params[:selected_friend]
+    @friend_feed = current_user.get_feed friend_uid
+  end
 
   protected
 
@@ -28,11 +33,6 @@ class FacebookController < ApplicationController
       unless logged_in?
         redirect_to :action => :login
       end
-    end
-    
-    def fetch_friend_posts
-      friend_uid = params[:selected_friend]
-      @friend_feed = current_user.get_feed friend_uid
     end
 
     def facebook_auth
