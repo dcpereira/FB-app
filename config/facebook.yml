@@ -1,9 +1,9 @@
 development:
   app_id: "232072346882570"
-  secret_key: "1219a720866ffb4fc13532dfcc6b6405"
+  secret_key: "fba4218644893e92390e5fe812931a0a"
 test:
   app_id: "232072346882570"
-  secret_key: "1219a720866ffb4fc13532dfcc6b6405"
+  secret_key: "fba4218644893e92390e5fe812931a0a"
 production:
   app_id: "232072346882570"
-  secret_key: "1219a720866ffb4fc13532dfcc6b6405"
+  secret_key: "fba4218644893e92390e5fe812931a0a"
