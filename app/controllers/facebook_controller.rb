@@ -25,16 +25,16 @@ class FacebookController < ApplicationController
     
     # @friend_feed = []
     @friend_feed ||= @graph.get_connections(params[:selected_friend], "feed")
-    @message,counter = [], 0
-    # unless @friend_feed.nil?
-    results ||= @friend_feed.next_page
-    @message << results
-    if (results != nil) 
-    while((counter <= 10 && results.next_page != nil)) 
-      counter += 1
-      results = results.next_page
-      @message << results
-    end
+    # @message,counter = [], 0
+    # # unless @friend_feed.nil?
+    # results ||= @friend_feed.next_page
+    # @message << results
+    # if (results != nil) 
+    # while((counter <= 10 && results.next_page != nil)) 
+    #   counter += 1
+    #   results = results.next_page
+    #   @message << results
+    # end
   end
       
     # end
