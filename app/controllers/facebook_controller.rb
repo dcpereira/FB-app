@@ -26,7 +26,11 @@ class FacebookController < ApplicationController
     
     # @friend_feed = []
     # @friend_feed ||= @graph.get_connections(params[:selected_friend], "feed")
-    @friend_feed = @graph.fql_query("select message from feed where uid = #{params[:selected_friend]}")
+    
+    # @friend_feed = @graph.fql_query("select message from feed where uid = #{params[:selected_friend]}")
+    @friend_feed = @graph.fql_query("select post_id from stream where source_id = #{params[:selected_friend]}")
+    
+    
     # @message,counter = params[:selected_friend], 0
     # @rest.fql_query("select name from user where uid = 2905623")
     
