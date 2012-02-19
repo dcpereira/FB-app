@@ -34,7 +34,7 @@ class FacebookController < ApplicationController
      FROM user 
      WHERE uid IN (#{commenter_ids})
        ")
-    @statistics = []
+    @statistics = ""
     names.each do |name|
       @statistics << "#{name['name']}" << "#{stats[name['uid']]}"
       # @statistics[name['name']] = stats[name['uid']]
