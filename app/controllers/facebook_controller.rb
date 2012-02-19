@@ -48,7 +48,7 @@ class FacebookController < ApplicationController
       stats_hash[id] += 1
     end
     # @statistics = stats_hash.sort
-    @friend_feed = stats_hash.sort
+    @friend_feed = stats_hash
     
    
 
