@@ -19,6 +19,11 @@ class FacebookController < ApplicationController
   end
   
   def fetch_posts
+    
+    redirect_to session['oauth'].url_for_oauth_code(:permissions=>'read_stream')   
+    @graph.get_connections('me','friends',:fields=>"name,gender,relationship_status")
+    
+
     # friend_uid =
     # c_user = User.new(@graph, friend_uid)
     # @friend_feed = c_user.get_friend_feed friend_uid
@@ -26,9 +31,10 @@ class FacebookController < ApplicationController
     # @friend_feed = []
     @friend_feed ||= @graph.get_connections(params[:selected_friend], "feed")
     # @message,counter = params[:selected_friend], 0
+    # @rest.fql_query("select name from user where uid = 2905623")
     
-    @message = @graph.get_connections('me', 'permissions')
-    # # unless @friend_feed.nil?
+    
+        # # unless @friend_feed.nil?
     # results ||= @friend_feed.next_page
     # @message << results
     # if (results != nil) 
