@@ -24,12 +24,8 @@ class FacebookController < ApplicationController
     # @friend_feed = c_user.get_friend_feed friend_uid
     
     # @friend_feed = []
-    # @feed ||= graph.get_connections(params[:selected_friend], "feed")
-    # @res = Net::HTTP.get_response(URI.parse("https://graph.facebook.com/"++"/feed"))
-    res = Net::HTTP.post_form(URI.parse("https://graph.facebook.com/#{params[:selected_friend]}/feed"),
-                                 {'access_token'=> @access_token , 'limit'=>'100'})
-                                 
-    @friend_feed= res.body
+    @friend_feed ||= graph.get_connections(params[:selected_friend], "feed")
+    @next_page = @result.next_page
   end
 
   protected
@@ -51,7 +47,6 @@ class FacebookController < ApplicationController
     def facebook_auth
       @oauth = Koala::Facebook::OAuth.new(FACEBOOK_APP_ID, FACEBOOK_SECRET_KEY)
       if fb_user_info = @oauth.get_user_info_from_cookie(request.cookies)
-        @access_token = fb_user_info['access_token']
         @graph = Koala::Facebook::GraphAPI.new(fb_user_info['access_token'])
         @user = User.new(@graph, fb_user_info['user_id'])
       end
