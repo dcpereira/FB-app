@@ -32,7 +32,7 @@ class FacebookController < ApplicationController
       # @friends_friends ||= @graph.get_connections(params[:selected_friend],'friends')
     stats = Hash.new(0)
     posts.each do |id|
-      stats[id['fromid']] += 1
+      stats[id] += 1
     end
     @friend_feed = stats.sort_by {|key, value| value}
     
