@@ -29,7 +29,7 @@ class FacebookController < ApplicationController
          WHERE source_id = '#{params[:selected_friend]}'  limit 100) 
          AND fromid != '#{params[:selected_friend]}')
       ")
-      @friends_friends ||= @graph.get_connections(params[:selected_friend],'friends')
+      # @friends_friends ||= @graph.get_connections(params[:selected_friend],'friends')
     stats = Hash.new(0)
     posts.each do |id|
       stats[id['fromid']] += 1
