@@ -18,22 +18,28 @@ class FacebookController < ApplicationController
   
   def fetch_posts
     posts = @graph.fql_query("
-        SELECT name 
-        FROM user 
-        WHERE uid IN
-          (SELECT fromid 
+          SELECT fromid 
           FROM comment 
           WHERE post_id IN 
             (SELECT post_id 
              FROM stream 
              WHERE source_id = '#{params[:selected_friend]}'  limit 100) 
-             AND fromid != '#{params[:selected_friend]}')
+             AND fromid != '#{params[:selected_friend]}'
     ")
+    
       # @friends_friends ||= @graph.get_connections(params[:selected_friend],'friends')
+    commenter_ids = []
     stats = Hash.new(0)
     posts.each do |id|
-      stats[id['name']] += 1
+      stats[id['fromid']] += 1
+      commenter_ids << id['fromid']
     end
+    commenter_ids = commenter_ids.join(",")
+    @names = @graph.fql_query(" 
+     SELECT name 
+     FROM user 
+     WHERE uid IN (#{commenter_ids})
+       ")
     @friend_feed = stats
     
   end
