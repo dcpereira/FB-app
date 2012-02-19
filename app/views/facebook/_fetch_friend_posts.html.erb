@@ -9,28 +9,26 @@
 	<input type="hidden" id ='chart_data' value="<%= @statistics %>" />
 </div>
 
-
 <script type="text/javascript">
-$(document).ready(function() {
+$(function () {
+	// data
+	var data = [
+		{ label: "Series1", data: 10},
+		{ label: "Series2", data: 30},
+		{ label: "Series3", data: 90},
+		{ label: "Series4", data: 70},
+		{ label: "Series5", data: 80},
+		{ label: "Series6", data: 110}
+	];
 
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Task');
-        data.addColumn('number', 'Hours per Day');
-        var pie_data = document.getElementById('chart_data');
-				var datta = pie_data.value;
-        data.addRows(datta);
+	$.plot($("#donut"), data,
+	{
+		series: {
+			pie: {
+				innerRadius: 0.5,
+				show: true
+			}
+		}
+	});
 
-        var options = {
-          width: 450, height: 300,
-          title: 'My Daily Activities'
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      }
-});
-    </script>
-
+</script>
