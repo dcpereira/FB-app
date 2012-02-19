@@ -40,15 +40,15 @@ class FacebookController < ApplicationController
     # posts.each do |post|
     #   post_ids << post.post_id unless post['comments']['count'] <= 0
     # end
-    # @friend_feed = posts
+    @friend_feed = posts
     
-    stats_hash = Hash.new(0)
-
-    posts.each do |id|
-      stats_hash[id.formid] += 1
+    # stats_hash = Hash.new(0)
+    # 
+    # posts.each do |id|
+    #   stats_hash[id] += 1
     end
     # @statistics = stats_hash.sort
-    @friend_feed = stats_hash.delete_if {|key, value| key == "#{params[:selected_friend]}" }
+    # @friend_feed = stats_hash.delete_if {|key, value| key == "#{params[:selected_friend]}" }
     
     
    
