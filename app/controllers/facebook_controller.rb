@@ -40,7 +40,12 @@ class FacebookController < ApplicationController
      FROM user 
      WHERE uid IN (#{commenter_ids})
        ")
-    @friend_feed = stats
+       
+    statistics =  Hash.new(0)
+    @names.each do |name|
+      statistics[name['name']] = stats[name['uid']]
+    end
+    @friend_feed = statistics
     
   end
   
