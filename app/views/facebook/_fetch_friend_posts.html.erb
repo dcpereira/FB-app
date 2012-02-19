@@ -3,6 +3,7 @@
 		<%= @statistics %>
 	</div>
 	<p>This is returning</p>
+<% end %>
 
 <div  id='chart_div'>
 	<input type="hidden" id ='chart_data' value="<%= @statistics %>" />
@@ -17,8 +18,13 @@
         data.addColumn('string', 'Task');
         data.addColumn('number', 'Hours per Day');
         var pie_data = document.getElementById('chart_data');
-
-        data.addRows(pie_data.value);
+        data.addRows([
+          ['Work',    11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
 
         var options = {
           width: 450, height: 300,
@@ -30,4 +36,3 @@
       }
     </script>
 
-<% end %>
