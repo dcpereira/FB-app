@@ -28,11 +28,13 @@ class FacebookController < ApplicationController
     @message,counter = [], 0
     # unless @friend_feed.nil?
     results ||= @friend_feed.next_page
-    while((results != nil) || (counter <= 5 && results.next_page != nil)) 
+    if (results != nil) 
+    while((counter <= 5 && results.next_page != nil)) 
       counter += 1
       results = results.next_page
       @message << results
     end
+  end
       
     # end
     #    @messages << f['message'] if f['message']
