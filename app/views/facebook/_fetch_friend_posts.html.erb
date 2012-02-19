@@ -21,9 +21,11 @@ $(document).ready(function() {
 	// data
 
 	var data_array = $("#chart_data").attr("value");
+	data_array = data_array.slice(0, -1)
+	var array=data_array.split(",");
 	alert(data_array);
 	var data =[]
-	for(var i = 0; i<data_array.length; i++){
+	for(var i = 0; i<data_array.length-1; i++){
 	  data[i] = { label: data_array[i], data: data_array[i+1] }
 	}
 	// var data = [
