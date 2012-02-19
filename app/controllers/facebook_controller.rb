@@ -34,7 +34,7 @@ class FacebookController < ApplicationController
     posts.each do |id|
       stats[id['name']] += 1
     end
-    @friend_feed = stats.sort_by {|key, value| value}
+    @friend_feed = stats
     
   end
   
