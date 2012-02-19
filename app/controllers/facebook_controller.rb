@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'gchartrb'
+require 'gcharts'
 
 class FacebookController < ApplicationController
 
