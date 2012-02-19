@@ -1,8 +1,7 @@
-$(function () {
+$(document).ready(function() {
 // data
 
 var data_array = $("#chart_data").attr("value");
-
 for(var i in data_array){
   data[i] = { label: data_array[i][0], data: data_array[i][1] }
 }
