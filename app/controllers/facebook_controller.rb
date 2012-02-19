@@ -36,7 +36,7 @@ class FacebookController < ApplicationController
     end
     commenter_ids = commenter_ids.join(",")
     @names = @graph.fql_query(" 
-     SELECT name 
+     SELECT name , uid
      FROM user 
      WHERE uid IN (#{commenter_ids})
        ")
