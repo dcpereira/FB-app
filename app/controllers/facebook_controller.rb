@@ -37,7 +37,7 @@ class FacebookController < ApplicationController
     @statistics = ""
     @statistics_unsorted = []
     names.each do |name|
-      @statistics_unsorted << [name['name'],stats[name['uid']]]
+      @statistics_unsorted << [stats[name['uid']], name['name']]
       @statistics << "#{name['name']}," << "#{stats[name['uid']]},"
       # @statistics[name['name']] = stats[name['uid']]
     end
