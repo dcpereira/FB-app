@@ -1,5 +1,5 @@
-
-require 'gruff'
+require 'rubygems'
+require 'google_charts'
 
 class FacebookController < ApplicationController
 
@@ -42,18 +42,9 @@ class FacebookController < ApplicationController
       @statistics[name['name']] = stats[name['uid']]
     end
     
-    @statistics = @statistics.sort_by {|k,v| v}
-    g = Gruff::Pie.new
-    g.title = "Visual Pie Graph Test"
-    g.data 'Fries', 20
-    g.data 'Hamburgers', 50
-    g.write("test/output/pie_keynote.png")
-    
-    g = Gruff::Pie.new
-    g.title = "Visual Pie Graph Test"
-    g.data 'Fries', 20
-    g.data 'Hamburgers', 50
-    g.write("../../public/images/pie_keynote.png")    
+    # @statistics = @statistics.sort_by {|k,v| v}
+    @statistics = GoogleChart.pie_3d_350x150('year 1997'=>10,'year 1998'=>20,'year 1999'=>15,'year 2000'=>55)
+  
   end
   
   protected
