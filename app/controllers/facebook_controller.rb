@@ -44,7 +44,7 @@ class FacebookController < ApplicationController
     end
     
     @statistics = @statistics.sort_by {|k,v| v}
-    render :text => chart_data
+    render :text => @statistics
     
   end
   
