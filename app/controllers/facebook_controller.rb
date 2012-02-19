@@ -34,7 +34,8 @@ class FacebookController < ApplicationController
       WHERE post_id IN 
         (SELECT post_id 
          FROM stream 
-         WHERE source_id = '#{params[:selected_friend]}' AND post_id != '#{params[:selected_friend]}' limit 100)
+         WHERE source_id = '#{params[:selected_friend]}'  limit 100) 
+         AND fromid != '#{params[:selected_friend]}'
       ")
     # post_ids =[]
     # posts.each do |post|
