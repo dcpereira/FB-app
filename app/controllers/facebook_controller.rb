@@ -42,7 +42,7 @@ class FacebookController < ApplicationController
       # @statistics[name['name']] = stats[name['uid']]
     end
     @statistics_unsorted.sort!.reverse!
-    
+    @statistics_unsorted = @statistics_unsorted.first(10).to_s
     # @statistics = @statistics.sort_by {|k,v| v}
     
   end
