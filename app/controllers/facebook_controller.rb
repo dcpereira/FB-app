@@ -19,15 +19,6 @@ class FacebookController < ApplicationController
   end
   
   def fetch_posts
-
-    # friend_uid =
-    # c_user = User.new(@graph, friend_uid)
-    # @friend_feed = c_user.get_friend_feed friend_uid
-    
-    # @friend_feed = []
-    # @friend_feed ||= @graph.get_connections(params[:selected_friend], "feed")
-    
-    # @friend_feed = @graph.fql_query("select message from feed where uid = #{params[:selected_friend]}")
     posts = @graph.fql_query("
       SELECT fromid 
       FROM comment 
@@ -37,45 +28,14 @@ class FacebookController < ApplicationController
          WHERE source_id = '#{params[:selected_friend]}'  limit 100) 
          AND fromid != '#{params[:selected_friend]}'
       ")
-    # post_ids =[]
-    # posts.each do |post|
-    #   post_ids << post.post_id unless post['comments']['count'] <= 0
-    # end
-    # @friend_feed = posts
-    
-    stats_hash = Hash.new(0)
 
+    stats_hash = Hash.new(0)
     posts.each do |id|
       stats_hash[id['fromid']] += 1
     end
-    # @statistics = stats_hash.sort
-    # stats_hash.delete(params[:selected_friend]) 
-    @friend_feed = stats_hash
-    # @friend_feed = stats_hash.delete_if {|key, value| key = "#{params[:selected_friend]}" }
-    
-    
-   
-
-    # @message,counter = params[:selected_friend], 0
-    # @rest.fql_query("select name from user where uid = 2905623")
-    
-    
-        # # unless @friend_feed.nil?
-    # results ||= @friend_feed.next_page
-    # @message << results
-    # if (results != nil) 
-    # while((counter <= 10 && results.next_page != nil)) 
-    #   counter += 1
-    #   results = results.next_page
-    #   @message << results
-    # end
-  # end
-      
-    # end
-    #    @messages << f['message'] if f['message']
-    # @next_page = @friend_feed.next_page
+   @friend_feed = stats_hash.sort_by {|key, value| value}
   end
-
+  
   protected
 
     def logged_in?
