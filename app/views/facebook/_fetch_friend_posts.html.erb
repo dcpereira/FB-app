@@ -5,7 +5,8 @@
 	<p>This is returning</p>
 <% end %>
 
-<div value="<%= @statistics %>" id='chart_div'>
+<div  id='chart_div'>
+	<input type="hidden" id ='chart_data' value="<%= @statistics %>" />
 </div>
 
 
@@ -16,7 +17,7 @@
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Task');
         data.addColumn('number', 'Hours per Day');
-        var pie_data = document.getElementById('chart_div');
+        var pie_data = document.getElementById('chart_data');
 				alert(pie_data.value);
         data.addRows([
           ['Work',    11],
