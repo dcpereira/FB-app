@@ -40,7 +40,7 @@ class FacebookController < ApplicationController
     end
     
     @statistics = @statistics.sort_by {|k,v| v}
-    
+    render :text => @statistics
   end
   
   protected
