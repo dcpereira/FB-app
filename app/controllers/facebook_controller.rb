@@ -28,7 +28,7 @@ class FacebookController < ApplicationController
     @message,counter = [], 0
     # unless @friend_feed.nil?
     results ||= @friend_feed.next_page
-    while((result != nil) || (counter <= 5 && results.next_page != nil)) 
+    while((results != nil) || (counter <= 5 && results.next_page != nil)) 
       counter += 1
       results = results.next_page
       @message << results
