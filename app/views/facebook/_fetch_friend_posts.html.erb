@@ -3,7 +3,7 @@
 		<%= @statistics %>
 	</div>
 	<p>This is returning</p>
-<% end %>
+
 
 <div  id='chart_div'>
 	<input type="hidden" id='chart_data' value="<%= @statistics %>" />
@@ -17,14 +17,8 @@
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Task');
         data.addColumn('number', 'Hours per Day');
-        var pie_data = $("#chart_data").value();
-        data.addRows([
-          ['Work',    11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
-        ]);
+        var pie_data = $("#chart_data").attr("value");
+        data.addRows(pie_data);
 
         var options = {
           width: 450, height: 300,
@@ -35,4 +29,4 @@
         chart.draw(data, options);
       }
     </script>
-
+<% end %>
