@@ -39,11 +39,11 @@ class FacebookController < ApplicationController
      FROM user 
      WHERE uid IN (#{commenter_ids})
        ")
-    statistics =  Hash.new(0)
+    @statistics =  Hash.new(0)
     names.each do |name|
-      statistics[name['name']] = stats[name['uid']]
+      @statistics[name['name']] = stats[name['uid']]
     end
-    @statistics = statistics.sort_by {|k,v| v}
+    @statistics.sort_by {|k,v| v}
     
   end
   
