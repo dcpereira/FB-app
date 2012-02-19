@@ -103,6 +103,7 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.31)
+    gruff
 
 PLATFORMS
   ruby
