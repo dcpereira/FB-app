@@ -35,7 +35,7 @@ class FacebookController < ApplicationController
     #   results = results.next_page
     #   @message << results
     # end
-  end
+  # end
       
     # end
     #    @messages << f['message'] if f['message']
