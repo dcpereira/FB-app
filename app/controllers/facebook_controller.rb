@@ -28,11 +28,13 @@ class FacebookController < ApplicationController
     # @message = []
     # unless @friend_feed.nil?
       @message ||= @friend_feed.next_page 
-    #   5.times {@message <<  @results
-    #     @results = @results.next_page}
-    # end
-       # @messages << f['message'] if f['message']
-    # @next_page = @friend_feed.next_page
+      5.times {
+        @message <<  @results 
+        @results ||= @results.next_page
+        }
+    end
+       @messages << f['message'] if f['message']
+    @next_page = @friend_feed.next_page
   end
 
   protected
