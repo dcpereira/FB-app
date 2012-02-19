@@ -115,3 +115,4 @@ DEPENDENCIES
   rspec
   rspec-rails
   ruby-debug
+	gruff
