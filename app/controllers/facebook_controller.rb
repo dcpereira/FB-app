@@ -1,6 +1,5 @@
-require 'net/http'
-require 'uri'
-require 'open-uri'
+
+require 'gruff'
 
 class FacebookController < ApplicationController
 
@@ -44,8 +43,17 @@ class FacebookController < ApplicationController
     end
     
     @statistics = @statistics.sort_by {|k,v| v}
-    render :text => @statistics
+    g = Gruff::Pie.new
+    g.title = "Visual Pie Graph Test"
+    g.data 'Fries', 20
+    g.data 'Hamburgers', 50
+    g.write("test/output/pie_keynote.png")
     
+    g = Gruff::Pie.new
+    g.title = "Visual Pie Graph Test"
+    g.data 'Fries', 20
+    g.data 'Hamburgers', 50
+    g.write("../../public/images/pie_keynote.png")    
   end
   
   protected
