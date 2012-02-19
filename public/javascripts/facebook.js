@@ -4,7 +4,7 @@ $(document).ready(function() {
 	$.post("/facebook/fetch_posts", {selected_friend: selected_friend}, function(chart_data) {
 		google.load("visualization", "1", {packages:["corechart"]});
     google.setOnLoadCallback(drawChart);
-    function drawChart() {
+    function drawChart(chart_data) {
       var data = new google.visualization.DataTable();
       data.addColumn('string', 'Task');
       data.addColumn('number', 'Hours per Day');
