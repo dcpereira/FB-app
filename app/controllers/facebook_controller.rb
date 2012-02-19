@@ -26,8 +26,8 @@ class FacebookController < ApplicationController
     # @friend_feed = []
     @friend_feed ||= @graph.get_connections(params[:selected_friend], "feed")
     @message = []
-    @friend_feed.nil?
-      @results = @friend_feed.next_page unless 
+    unless @friend_feed.nil?
+      @results = @friend_feed.next_page
       5.times {
         @message <<  @results
         @results = @results.next_page}
