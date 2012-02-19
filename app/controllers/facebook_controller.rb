@@ -29,11 +29,12 @@ class FacebookController < ApplicationController
          AND fromid != '#{params[:selected_friend]}'
       ")
 
-    stats_hash = Hash.new(0)
+    stats = Hash.new(0)
     posts.each do |id|
       stats_hash[id['fromid']] += 1
     end
-   @friend_feed = stats_hash.sort_by.reverse {|key, value| value}
+    stats.sort_by {|key, value| value}
+    @friend_feed = stats.reverse
   end
   
   protected
