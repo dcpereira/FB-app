@@ -34,10 +34,6 @@ class FacebookController < ApplicationController
       @message << results
     end
       
-      } 
-      @message << @friend_feed.next_page 
-
-
     # end
     #    @messages << f['message'] if f['message']
     # @next_page = @friend_feed.next_page
