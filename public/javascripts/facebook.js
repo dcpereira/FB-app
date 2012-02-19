@@ -24,10 +24,10 @@ $(document).ready(function() {
 	// { label: "Series6", data: 110}
 	// ];
 
-	for( var i = 0; i<data.length; i++)
-	{
-	data[i] = { label: "Series"+(i+1), data: Math.floor(Math.random()*100)+1 }
-	}
+	// for( var i = 0; i<data.length; i++)
+	// {
+	// data[i] = { label: "Series"+(i+1), data: Math.floor(Math.random()*100)+1 }
+	// }
 
 		$.plot($("#donut"), data,
 		{
