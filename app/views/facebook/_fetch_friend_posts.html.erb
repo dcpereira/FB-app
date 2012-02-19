@@ -21,6 +21,7 @@ $(document).ready(function() {
 	// data
 
 	var data_array = $("#chart_data").attr("value");
+	alert(data_array);
 	var data =[]
 	for(var i = 0; i<data_array.length; i++){
 	  data[i] = { label: data_array[i], data: data_array[i+1] }
