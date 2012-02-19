@@ -1,5 +1,3 @@
-
-<script type="text/javascript">
 $(function () {
 // data
 
@@ -32,6 +30,3 @@ data[i] = { label: "Series"+(i+1), data: Math.floor(Math.random()*100)+1 }
 		}
 	});
 });
-
-
-</script>
