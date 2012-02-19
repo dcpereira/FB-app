@@ -29,7 +29,7 @@ class FacebookController < ApplicationController
     # unless @friend_feed.nil?
     results ||= @friend_feed.next_page
     if (results != nil) 
-    while((counter <= 5 && results.next_page != nil)) 
+    while((counter <= 10 && results.next_page != nil)) 
       counter += 1
       results = results.next_page
       @message << results
