@@ -23,34 +23,34 @@
 $(document).ready(function() {
 	// data
 
-	// var data_string = $("#chart_data").attr("value");
-	// data_string = data_string.slice(0, -1);
-	// alert(data_string);
-	// var array = data_string.split(",");
-	// var data = [];
-	// var counter = 0;
-	// for(var i = 0; i<array.length-1; i++){
-	//   data[counter] = { label: ""+array[i], data: array[i+1] }
-	// 	alert(array[i]);
-	// 	alert(array[i+1]);
-	// 	alert(counter);
-	// 	alert(data[counter]);
-	// 	counter++;
-	// 	i++;
-	// }
+	var data_string = $("#chart_data").attr("value");
+	data_string = data_string.slice(0, -1);
+	alert(data_string);
+	var array = data_string.split(",");
+	var data = [];
+	var counter = 0;
+	for(var i = 0; i<array.length-1; i++){
+	  data[counter] = { label: ""+array[i], data: parseInt(array[i+1]) }
+		// alert(array[i]);
+		// alert(array[i+1]);
+		// alert(counter);
+		// alert(data[counter]);
+		counter++;
+		i++;
+	}
 
-	var data = [
-	{ label: "Series1", data: 10},
-	{ label: "Series2", data: 30},
-	{ label: "Series3", data: 90},
-	{ label: "Series4", data: 70},
-	{ label: "Series5", data: 80},
-	{ label: "Series6", data: 110}
-	];
-	alert(data[1]);
-	alert(data[2]);
-	alert(data[3]);
-	alert(data[4]);
+	// var data = [
+	// { label: "Series1", data: 10},
+	// { label: "Series2", data: 30},
+	// { label: "Series3", data: 90},
+	// { label: "Series4", data: 70},
+	// { label: "Series5", data: 80},
+	// { label: "Series6", data: 110}
+	// ];
+	// alert(data[1]);
+	// alert(data[2]);
+	// alert(data[3]);
+	// alert(data[4]);
 
 
 		$.plot($("#donut"), data,
