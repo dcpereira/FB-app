@@ -34,7 +34,7 @@ class FacebookController < ApplicationController
       WHERE post_id IN 
         (SELECT post_id 
          FROM stream 
-         WHERE source_id = #{params[:selected_friend]} limit 100)
+         WHERE source_id = '#{params[:selected_friend]}' AND post_id != '#{params[:selected_friend]}' limit 100)
       ")
     # post_ids =[]
     # posts.each do |post|
@@ -48,7 +48,7 @@ class FacebookController < ApplicationController
       stats_hash[id['fromid']] += 1
     end
     # @statistics = stats_hash.sort
-    stats_hash.delete("#{params[:selected_friend]}") 
+    # stats_hash.delete(params[:selected_friend]) 
     @friend_feed = stats_hash
     # @friend_feed = stats_hash.delete_if {|key, value| key = "#{params[:selected_friend]}" }
     
