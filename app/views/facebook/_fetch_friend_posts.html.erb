@@ -9,6 +9,12 @@
 	<input type="hidden" id ='chart_data' value="<%= @statistics %>" />
 </div>
 
+<div id="donut" class="graph" style="padding: 0px; position: relative;">
+<canvas class="base" width="400" height="300"></canvas>
+<canvas class="overlay" width="400" height="300" style="position: absolute; left: 0px; top: 0px;"></canvas>
+
+</div>
+
 <script type="text/javascript">
 	// data
 	var data = [
