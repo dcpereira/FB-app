@@ -6,10 +6,8 @@
 		<meta http-equiv="Content-Language" content="en-GB" />
 		<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="https://people.iola.dk/olau/flot//excanvas.min.js"></script><![endif]-->
 		<script type="text/javascript" src="https://people.iola.dk/olau/flot/jquery.js"></script>
-		<script type="text/javascript" src="https://people.iola.dk/olau/flot/jquery.flot.js"></script>
-		<script type="text/javascript" src="https://people.iola.dk/olau/flot/jquery.flot.pie.js"></script>
     <%= stylesheet_link_tag 'application', 'facebook' %>
-		<%= javascript_include_tag 'jquery','facebook', 'gcharts' %>
+		<%= javascript_include_tag 'jquery','facebook', 'jquery_flot','jquery_flot_pie' %>
   </head>
 	<body>
 		 <%= facebook_login_button('large') %>
