@@ -45,7 +45,7 @@ class FacebookController < ApplicationController
     stats_hash = Hash.new(0)
 
     posts.each do |id|
-      stats_hash["#{id['formid']}"] += 1
+      stats_hash[id.formid] += 1
     end
     # @statistics = stats_hash.sort
     @friend_feed = stats_hash.delete_if {|key, value| key == "#{params[:selected_friend]}" }
