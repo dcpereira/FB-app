@@ -31,7 +31,7 @@ class FacebookController < ApplicationController
     posts = @graph.fql_query("select post_id, comments from stream where source_id = #{params[:selected_friend]} limit 100")
     post_ids =[]
     posts.each do |post|
-      post_ids << post.post_id unless post.comments['count'] <= 0
+      post_ids << post.post_id unless post['comments']['count'] <= 0
     end
     @friend_feed = post_ids.length
    
