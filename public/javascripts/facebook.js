@@ -8,6 +8,8 @@ $(document).ready(function() {
 
 	
 	$.post("/facebook/fetch_posts", {selected_friend: selected_friend});
+	
+	
 	});
 });
 
