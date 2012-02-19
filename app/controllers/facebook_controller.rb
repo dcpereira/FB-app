@@ -36,7 +36,7 @@ class FacebookController < ApplicationController
        ")
     @statistics = []
     names.each do |name|
-      @statistics << "#{name['name']},#{stats[name['uid']]},"
+      @statistics << "#{name['name']}" << "#{stats[name['uid']]}"
       # @statistics[name['name']] = stats[name['uid']]
     end
     
