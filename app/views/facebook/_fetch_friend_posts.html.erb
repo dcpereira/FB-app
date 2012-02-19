@@ -16,8 +16,8 @@
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Task');
         data.addColumn('number', 'Hours per Day');
-        var pie_data = document.getElementById('chart_div').val();
-				alert(pie_data);
+        var pie_data = document.getElementById('chart_div');
+				alert(pie_data.value);
         data.addRows([
           ['Work',    11],
           ['Eat',      2],
