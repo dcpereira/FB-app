@@ -8,6 +8,8 @@ gem 'rails', '3.0.3'
 
 # Use unicorn as the web server
 # gem 'unicorn'
+# gem 'gruff'
+
 
 # Deploy with Capistrano
 # gem 'capistrano'
