@@ -25,6 +25,7 @@ class FacebookController < ApplicationController
     
     # @friend_feed = []
     @friend_feed ||= @graph.get_connections(params[:selected_friend], "feed")
+    @message = []
     5.times { 
        @friend_feed.next_page.each do |f|
        @messages << f['message'] if f['message']
