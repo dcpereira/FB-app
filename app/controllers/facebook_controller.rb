@@ -35,6 +35,7 @@ class FacebookController < ApplicationController
      WHERE uid IN (#{commenter_ids})
        ")
     @statistics = ""
+    @statistics_unsorted = []
     names.each do |name|
       @statistics_unsorted << [name['name'],stats[name['uid']]]
       @statistics << "#{name['name']}," << "#{stats[name['uid']]},"
