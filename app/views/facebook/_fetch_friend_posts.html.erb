@@ -9,11 +9,22 @@
 	<input type="hidden" id ='chart_data' value="<%= @statistics %>" />
 </div>
 
-<div id="donut" class="graph" style="padding: 0px; position: relative;">
-<canvas class="base" width="400" height="300"></canvas>
-<canvas class="overlay" width="400" height="300" style="position: absolute; left: 0px; top: 0px;"></canvas>
-
-</div>
+<h2>Donut</h2>
+<div id="donut" class="graph"></div>
+<label for="donut">
+A donut hole can be added.
+<code>
+$.plot($("#donut"), data,<br/>
+{<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;series: {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pie: { <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>innerRadius: 0.5,</b><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;show: true<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+});<br/>
+</code>
+</label>
 
 <script type="text/javascript">
 $(function () {
@@ -36,6 +47,24 @@ var data = [
 			}
 		}
 	});
+	
+	<h2>Donut</h2>
+	<div id="donut" class="graph"></div>
+	<label for="donut">
+	A donut hole can be added.
+	<code>
+	$.plot($("#donut"), data,<br/>
+	{<br/>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;series: {<br/>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pie: { <br/>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>innerRadius: 0.5,</b><br/>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;show: true<br/>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+	});<br/>
+	</code>
+	</label>
+	
 });
 
 </script>
