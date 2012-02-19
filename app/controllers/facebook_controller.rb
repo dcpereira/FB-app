@@ -1,6 +1,3 @@
-require 'rubygems'
-require 'gcharts'
-
 class FacebookController < ApplicationController
 
   before_filter :facebook_auth
@@ -42,9 +39,8 @@ class FacebookController < ApplicationController
       @statistics[name['name']] = stats[name['uid']]
     end
     
-    # @statistics = @statistics.sort_by {|k,v| v}
-    @statistics = GoogleChart.pie_3d_350x150('year 1997'=>10,'year 1998'=>20,'year 1999'=>15,'year 2000'=>55)
-  
+    @statistics = @statistics.sort_by {|k,v| v}
+    
   end
   
   protected
