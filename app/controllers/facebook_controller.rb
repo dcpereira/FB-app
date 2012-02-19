@@ -40,7 +40,7 @@ class FacebookController < ApplicationController
       unsorted_statistics << [stats[name['uid']], name['name']]
       # @statistics << "#{name['name']}," << "#{stats[name['uid']]},"
     end
-    statistics_unsorted.sort!.reverse!
+    unsorted_statistics.sort!.reverse!
     unsorted_statistics.first(10).each {|a| @statistics << "#{a[1]}," << "#{a[0]},"}    
   end
   
