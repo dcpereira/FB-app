@@ -19,10 +19,6 @@ class FacebookController < ApplicationController
   end
   
   def fetch_posts
-    
-    redirect_to session['oauth'].url_for_oauth_code(:permissions=>'read_stream')   
-    @graph.get_connections('me','friends',:fields=>"name,gender,relationship_status")
-    
 
     # friend_uid =
     # c_user = User.new(@graph, friend_uid)
