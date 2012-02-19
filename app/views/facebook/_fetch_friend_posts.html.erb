@@ -27,12 +27,14 @@ $(document).ready(function() {
 	data_string = data_string.slice(0, -1);
 	alert(data_string);
 	var array=data_string.split(",");
-	alert(array);
 	var data =[];
-	alert(array.length-1);
 	var counter = 0;
 	for(var i = 0; i<array.length-1; i++){
 	  data[counter] = { label: ""+array[i], data: array[i+1] }
+		alert(array[i]);
+		alert(array[i+1]);
+		alert(counter);
+		alert(data[counter]);
 		counter++;
 		i++;
 	}
