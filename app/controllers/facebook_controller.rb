@@ -36,9 +36,11 @@ class FacebookController < ApplicationController
        ")
     @statistics = ""
     names.each do |name|
+      @statistics_unsorted << [name['name'],stats[name['uid']]]
       @statistics << "#{name['name']}," << "#{stats[name['uid']]},"
       # @statistics[name['name']] = stats[name['uid']]
     end
+    @statistics_unsorted.sort!
     
     # @statistics = @statistics.sort_by {|k,v| v}
     
