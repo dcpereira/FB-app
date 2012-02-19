@@ -25,7 +25,12 @@ class FacebookController < ApplicationController
     
     # @friend_feed = []
     @friend_feed ||= @graph.get_connections(params[:selected_friend], "feed")
-    @next_page = @friend_feed.next_page
+    5.times { 
+       @friend_feed.next_page.each do |f|
+       @messages << f['message'] if f['message']
+       end
+      }
+    # @next_page = @friend_feed.next_page
   end
 
   protected
