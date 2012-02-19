@@ -29,8 +29,8 @@ $(document).ready(function() {
 	var array=data_string.split(",");
 	var data =[];
 	var counter = 0;
-	for(var i = 0; i<array.length-1; i++){
-	  data[counter] = { label: ""+array[i], data: array[i+1] }
+	for(var i = 0; i<array.length-1; i+2){
+	  data[counter] = { label: ""+array[i-1], data: array[i] }
 		alert(array[i]);
 		alert(array[i+1]);
 		alert(counter);
