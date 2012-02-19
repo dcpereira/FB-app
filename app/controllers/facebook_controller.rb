@@ -43,8 +43,7 @@ class FacebookController < ApplicationController
     names.each do |name|
       @statistics[name['name']] = stats[name['uid']]
     end
-    @statistics.sort_by {|k,v| v}
-    
+    # @statistics.sort_by {|k,v| v}   
   end
   
   protected
