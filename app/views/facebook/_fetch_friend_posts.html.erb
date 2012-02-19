@@ -3,7 +3,7 @@
 		<%= @statistics %>
 	</div>
 	<p>This is returning</p>
-<% end %>
+
 
 <div  id='chart_div'>
 	<input type="hidden" id ='chart_data' value="<%= @statistics %>" />
@@ -18,14 +18,16 @@
 <script type="text/javascript">
 $(function () {
 // data
-var data = [
-{ label: "Series1", data: 10},
-{ label: "Series2", data: 30},
-{ label: "Series3", data: 90},
-{ label: "Series4", data: 70},
-{ label: "Series5", data: 80},
-{ label: "Series6", data: 110}
-];
+
+var data = $("#chart_data").val();
+// var data = [
+// { label: "Series1", data: 10},
+// { label: "Series2", data: 30},
+// { label: "Series3", data: 90},
+// { label: "Series4", data: 70},
+// { label: "Series5", data: 80},
+// { label: "Series6", data: 110}
+// ];
 
 	$.plot($("#donut"), data,
 	{
@@ -38,8 +40,9 @@ var data = [
 	});
 });
 
-</script>
 
+</script>
+<% end %>
 <style type="text/css">
 		* {
 		  font-family: sans-serif;
