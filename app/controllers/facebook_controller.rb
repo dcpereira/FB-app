@@ -28,9 +28,18 @@ class FacebookController < ApplicationController
     # @friend_feed ||= @graph.get_connections(params[:selected_friend], "feed")
     
     # @friend_feed = @graph.fql_query("select message from feed where uid = #{params[:selected_friend]}")
-    @friend_feed = @graph.fql_query("select post_id, comments from stream where source_id = #{params[:selected_friend]} limit 1000")
-    
-    
+    posts = @graph.fql_query("select post_id, comments from stream where source_id = #{params[:selected_friend]} limit 100")
+    post_ids =[]
+    post_ids << posts.post_id unless posts.comments['count'] <= 0
+    @friend_feed = post_ids.length
+   
+    # SELECT fromid 
+    # FROM comment 
+    # WHERE post_id IN 
+    #   (SELECT comments_fbid 
+    #    FROM link_stat 
+    #    WHERE )
+    # 
     # @message,counter = params[:selected_friend], 0
     # @rest.fql_query("select name from user where uid = 2905623")
     
