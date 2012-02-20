@@ -13,7 +13,9 @@ box-shadow: -5px -5px 5px #888;
 
 body{
 	
-	background-color:black;
+	background-image:url('/public/images/back.png');
+	background-repeat:repeat-y;
+	background-repeat:repeat-x;
 }
 
 div.graph
