@@ -59,6 +59,6 @@ float:right;
 #hover_name{
 	text-align: center;
 	position: relative;
-	top: 400px;
-	right:100px;
+	top: 100px;
+	right:1px;
 }
