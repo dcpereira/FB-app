@@ -15,7 +15,8 @@
 <script type="text/javascript">
 $(document).ready(function() {
 
-	$('#wait').add('<p>Ranking wall - One moment please...</p>');
+	$('#wait').update('<p>Ranking wall - One moment please...</p>');
+	alert('works');
 
 	var data_string = $("#chart_data").attr("value");
 	data_string = data_string.slice(0, -1);
