@@ -1,19 +1,18 @@
 div.graph
 {
 	position: absolute;
-	left: 450px;
-	top: 450px;
+	margin-left: 350px;
+	margin-top: 350px;
 	width: 750px;
 	height: 410px;
-	float: left;
-	border: 1px dashed gainsboro;
-}
+/*	border: 1px dashed gainsboro;
+*/}
 
 label
 {
 	display: block;
-	margin-right: 600px;
-	padding: 20em;
+	margin-right: 700px;
+	padding: 5em;
 }
 
 h2
