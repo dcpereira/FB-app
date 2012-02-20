@@ -1,0 +1,22 @@
+div.graph
+{
+	width: 625px;
+	height: 300px;
+	float: left;
+	border: 1px dashed gainsboro;
+}
+
+label
+{
+	display: block;
+	margin-left: 400px;
+	padding-left: 1em;
+}
+
+h2
+{
+	padding-top: 1em;
+	margin-bottom: 0;
+	clear: both;
+	color: #ccc;
+}
