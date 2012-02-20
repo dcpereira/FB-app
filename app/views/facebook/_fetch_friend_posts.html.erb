@@ -26,15 +26,10 @@ $(document).ready(function() {
 	var array = data_string.split(",");
 	var data = [];
 	var counter = 0;
-	//first and last name only to limit length of string used for legend
-	var name = array[i].split(' ');
-	name = name[0]+""+name[name.length];
-	alert(name[0]);
-	alert(name[name.length]);
+	var name = array[i].replace("/\\s*\\s/g", " ");
 	alert(name);
-	
 	for(var i = 0; i<array.length-1; i++){
-	  data[counter] = { label: ""+name, data: parseInt(array[i+1]) }
+	  data[counter] = { label: ""+array[i], data: parseInt(array[i+1]) }
 		counter++;
 		i++;
 	}
