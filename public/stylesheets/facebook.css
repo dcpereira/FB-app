@@ -52,13 +52,13 @@ float:right;
 #hover_percentile{
 	text-align: center;
 	position: absolute;
-	top: 47px;
+	top: 470px;
 	left:682px;
 }
 
 #hover_name{
 	text-align: center;
 	position: absolute;
-	top: 600px;
-	left:800px;
+	top: 400px;
+	right:100px;
 }
