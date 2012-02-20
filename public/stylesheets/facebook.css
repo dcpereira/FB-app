@@ -20,7 +20,7 @@ body{
 div.graph
 {
 	position: relative;
-	left: -50px;
+	left: -30px;
 	top: 40px;
 	width: 750px;
 	height: 410px;
@@ -46,7 +46,7 @@ h2
 
 #hover{
 	position: absolute;
-	top: 420px;
-	left:550px;
+	top: 450px;
+	left:570px;
 	
 }
