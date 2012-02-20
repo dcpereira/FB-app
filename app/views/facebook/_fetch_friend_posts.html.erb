@@ -42,7 +42,12 @@ $(document).ready(function() {
       grid: {
           hoverable: true,
           clickable: true
-      }
+      },
+			legend:{
+				
+				margin: 150;
+				position: "se" ;
+			}
 	});
 	$("#interactive").bind("plothover", pieHover);
 	$("#interactive").bind("plotclick", pieClick);
