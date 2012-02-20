@@ -21,7 +21,7 @@ body{
 div.graph
 {
 	position: relative;
-	left: 1px;
+	left: -20px;
 	top: 1px;
 	width: 750px;
 	height: 410px;
