@@ -8,12 +8,13 @@ background-color:white;
 -moz-box-shadow: -5px -5px 5px #888;
 -webkit-box-shadow: -5px -5px 5px #888;
 box-shadow: -5px -5px 5px #888;
+padding:5em;
 }
 
 
 body{
 	
-	background-image:url('/public/images/back.png');
+	background-image:url('../images/back.png');
 	background-repeat:repeat-y;
 	background-repeat:repeat-x;
 }
@@ -21,7 +22,7 @@ body{
 div.graph
 {
 	position: relative;
-	margin-left: 290px;
+	margin-left: 200px;
 	margin-top: 20px;
 	width: 750px;
 	height: 410px;
