@@ -1,9 +1,9 @@
 div.graph
 {
 	position: absolute;
-	left: 120px;
-	top: 150px;
-	width: 600px;
+	left: 450px;
+	top: 450px;
+	width: 750px;
 	height: 410px;
 	float: left;
 	border: 1px dashed gainsboro;
@@ -13,7 +13,7 @@ label
 {
 	display: block;
 	margin-right: 600px;
-	padding-left: 5em;
+	padding: 20em;
 }
 
 h2
