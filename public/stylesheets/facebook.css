@@ -1,6 +1,5 @@
 div#main-content {
-margin-left: 320px;
-width:700px;
+margin: auto 150 0.75em;
 /*-webkit-border-radius: 15px;
 -moz-border-radius: 15px;
 border-radius: 15px;*/
