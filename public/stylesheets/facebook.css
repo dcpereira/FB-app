@@ -15,14 +15,13 @@ padding:5em;
 body{
 	
 	background-image:url('../images/back.png');
-	background-repeat:repeat-y;
-	background-repeat:repeat-x;
+	background-repeat:repeat;
 }
 
 div.graph
 {
 	position: relative;
-	margin-left: 200px;
+	margin-left: 1px;
 	margin-top: 20px;
 	width: 750px;
 	height: 410px;
