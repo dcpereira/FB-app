@@ -7,11 +7,12 @@
 	<div id='wait'></div>
 		<div id="interactive" class="graph"></div>
 		<label for="interactive">
+		<div id="hover"></div>
 			
 		</label>
 		
 		
-		<div id="hover"></div>
+	
 <% end %>
 
 <p><%= @statistics_unsorted %></p>
@@ -46,4 +47,20 @@ $(document).ready(function() {
 	$("#interactive").bind("plothover", pieHover);
 	$("#interactive").bind("plotclick", pieClick);
 });
+
+function pieHover(event, pos, obj) 
+{
+	if (!obj)
+                return;
+	percent = parseFloat(obj.series.percent).toFixed(2);
+	$("#hover").html('<span style="font-weight: bold; color: '+obj.series.color+'">'+obj.series.label+' ('+percent+'%)</span>');
+}
+
+function pieClick(event, pos, obj) 
+{
+	if (!obj)
+                return;
+	percent = parseFloat(obj.series.percent).toFixed(2);
+	alert(''+obj.series.label+': '+percent+'%');
+}
 </script>
