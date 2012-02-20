@@ -1,6 +1,6 @@
 div.graph
 {
-	width: 400px;
+	width: 600px;
 	height: 300px;
 	float: left;
 	border: 1px dashed gainsboro;
@@ -9,7 +9,7 @@ div.graph
 label
 {
 	display: block;
-	margin-left: 490px;
+	margin-left: 300px;
 	padding-left: 1em;
 }
 
