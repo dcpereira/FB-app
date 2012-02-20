@@ -14,7 +14,9 @@
 
 <script type="text/javascript">
 $(document).ready(function() {
-	// data
+
+	$('#wait').add('<p>Ranking wall - One moment please...</p>');
+
 	var data_string = $("#chart_data").attr("value");
 	data_string = data_string.slice(0, -1);
 	var array = data_string.split(",");
