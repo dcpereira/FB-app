@@ -59,7 +59,7 @@ function pieHover(event, pos, obj)
 	if (!obj)
                 return;
 	percent = parseFloat(obj.series.percent).toFixed(2);
-	$("#hover").html('<span style="text-align: center; margin-left: 250; font-size: 15px; font-weight: bold; color: '+obj.series.color+'">'+obj.series.label+' <br/>('+percent+'%)</span>');
+	$("#hover").html('<span style="text-align: center; margin-left: 250; font-size: 15px; font-weight: bold; color: '+obj.series.color+'">+'percent+'%)</span>');
 }
 
 function pieClick(event, pos, obj) 

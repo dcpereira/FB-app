@@ -1,7 +1,7 @@
 div.graph
 {
 	position: absolute;
-	margin-left: 300px;
+	margin-left: 290px;
 	margin-top: 20px;
 	width: 750px;
 	height: 410px;
@@ -30,7 +30,7 @@ h2
 
 #hover{
 	position: absolute;
-	top: 400px;
-	left:500px;
+	top: 420px;
+	left:550px;
 	
 }
