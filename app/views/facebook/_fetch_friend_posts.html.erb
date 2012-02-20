@@ -7,7 +7,8 @@
 	<div id='wait'></div>
 		<div id="interactive" class="graph"></div>
 		<label for="interactive">
-		<div id="hover"></div>			
+		<div id="hover_percentile"></div>			
+		<div id="hover_name"></div>			
 		</label>
 <% end %>
 
@@ -55,7 +56,9 @@ function pieHover(event, pos, obj)
 	if (!obj)
                 return;
 	percent = parseFloat(obj.series.percent).toFixed(2);
-	$("#hover").html('<span style="text-align: center; margin-left: 250; font-size: 15px; font-weight: bold; color: '+obj.series.color+'">'+percent+'%</span>');
+	$("#hover_percentile").html('<span style="text-align: center; margin-left: 250; font-size: 15px; font-weight: bold; color: '+obj.series.color+'">'+percent+'%</span>');
+	
+	$("#hover_name").html('<span style="text-align: center; margin-left: 250; font-size: 15px; font-weight: bold; color: '+obj.series.color+'">'+percent+'%</span>');
 }
 
 function pieClick(event, pos, obj) 
