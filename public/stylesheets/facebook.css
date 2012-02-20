@@ -2,7 +2,7 @@ div.graph
 {
 	position: absolute;
 	margin-left: 300px;
-	margin-top: 80px;
+	margin-top: 20px;
 	width: 750px;
 	height: 410px;
 /*	border: 1px dashed gainsboro;
@@ -30,7 +30,7 @@ h2
 
 #hover{
 	position: absolute;
-	top: 300;
-	left:300;
+	top: 300px;
+	left:300px;
 	
 }
