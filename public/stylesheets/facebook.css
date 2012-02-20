@@ -21,8 +21,8 @@ body{
 div.graph
 {
 	position: relative;
-	left: -100px;
-	top: 1px;
+	left: -70px;
+	top: 50px;
 	width: 750px;
 	height: 410px;
 /*	border: 1px dashed gainsboro;
