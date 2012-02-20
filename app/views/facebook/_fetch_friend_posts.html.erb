@@ -29,6 +29,9 @@ $(document).ready(function() {
 	//first and last name only to limit length of string used for legend
 	var name = array[i].split(' ');
 	name = name[0]+""+name[name.length];
+	alert(name[0]);
+	alert(name[name.length]);
+	alert(name);
 	
 	for(var i = 0; i<array.length-1; i++){
 	  data[counter] = { label: ""+name, data: parseInt(array[i+1]) }
