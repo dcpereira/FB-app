@@ -5,7 +5,6 @@ div.graph
 	top: 150px;
 	width: 600px;
 	height: 410px;
-	display: block;
 	float: left;
 	border: 1px dashed gainsboro;
 }
@@ -13,8 +12,8 @@ div.graph
 label
 {
 	display: block;
-	margin-left: 600px;
-	padding-left: 10em;
+	margin-right: 600px;
+	padding-left: 5em;
 }
 
 h2
