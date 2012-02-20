@@ -5,8 +5,9 @@
 
 	<h2>Top Commentator's</h2>
 	<div id='wait'></div>
-		<div id="donut" class="graph"></div>
-		<label for="donut">
+		<div id="interactive" class="graph"></div>
+		<label for="interactive">
+			<div id="hover"></div>
 		</label>
 <% end %>
 
@@ -26,14 +27,20 @@ $(document).ready(function() {
 		counter++;
 		i++;
 	}
-	$.plot($("#donut"), data,
+	$.plot($("#interactive"), data,
 	{
 		series: {
 			pie: {
 				innerRadius: 0.5,
 				show: true
 			}
-		}
+		},
+      grid: {
+          hoverable: true,
+          clickable: true
+      }
 	});
+	$("#interactive").bind("plothover", pieHover);
+	$("#interactive").bind("plotclick", pieClick);
 });
 </script>
