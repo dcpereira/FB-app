@@ -2,6 +2,7 @@ div.graph
 {
 	width: 600px;
 	height: 300px;
+	display: block;
 	float: left;
 	border: 1px dashed gainsboro;
 }
@@ -9,7 +10,7 @@ div.graph
 label
 {
 	display: block;
-	margin-left: 300px;
+	margin-left: 450px;
 	padding-left: 1em;
 }
 
@@ -19,4 +20,9 @@ h2
 	margin-bottom: 0;
 	clear: both;
 	color: #ccc;
+}
+
+#drop{
+	
+	float: left;
 }
