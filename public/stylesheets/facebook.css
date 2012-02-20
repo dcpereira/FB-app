@@ -1,7 +1,6 @@
-posts_content{
+chart-content{
 	margin-left: 150;
 	width:700px;
-	height:100px;
 /*	-webkit-border-radius: 15px;
 	-moz-border-radius: 15px;
 	border-radius: 15px;*/
@@ -12,10 +11,9 @@ posts_content{
 	z-index:10;
 }
 
-div#main-content, {
+div#main-content {
 margin-left: 150;
 width:700px;
-height:100px;
 /*-webkit-border-radius: 15px;
 -moz-border-radius: 15px;
 border-radius: 15px;*/
