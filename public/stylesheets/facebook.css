@@ -1,13 +1,13 @@
 div#main-content {
-margin-left: 230px;
+margin-left: 330px;
 width:700px;
 /*-webkit-border-radius: 15px;
 -moz-border-radius: 15px;
 border-radius: 15px;*/
 background-color:white;
--moz-box-shadow: 0 0 5px 5px #888;
--webkit-box-shadow: 5px 0 0 5px#888;
-box-shadow: 0 0 5px 5px #888;
+-moz-box-shadow: 5px 0 0 5px #888;
+-webkit-box-shadow: 5px 0 0 5px #888;
+box-shadow: 5px 0 0 5px #888;
 z-index:10;
 }
 
