@@ -39,12 +39,15 @@ $(document).ready(function() {
 				show: true
 			}
 		},
-      grid: {
-          hoverable: true,
-          clickable: true
+     grid: {
+       hoverable: true,
+       clickable: true
       },
 			legend: {
 				show: true
+			},
+			xaxis, yaxis: {
+				show: false
 			}
 	});
 	$("#interactive").bind("plothover", pieHover);
