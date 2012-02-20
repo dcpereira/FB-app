@@ -6,7 +6,7 @@ class FacebookController < ApplicationController
   helper_method :logged_in?, :current_user
   
   def index
-    @friends = current_user.get_friends.sort
+    @friends = current_user.get_friends
   end
 
   def login    
