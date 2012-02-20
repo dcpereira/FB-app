@@ -20,7 +20,7 @@ body{
 
 div.graph
 {
-	position: absolute;
+	position: relative;
 	left: 240px;
 	top: 340px;
 	width: 750px;
