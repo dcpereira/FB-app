@@ -52,8 +52,8 @@ float:right;
 #hover_percentile{
 	text-align: center;
 	position: relative;
-	top: 473px;
-	left:682px;
+	bottom: 473px;
+	left:280px;
 }
 
 #hover_name{
