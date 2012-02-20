@@ -1,4 +1,7 @@
 div#main-content, posts_content{
+	margin-left: 150;
+	width:700px;
+	height:100px;
 	-webkit-border-radius: 15px;
 	-moz-border-radius: 15px;
 	border-radius: 15px;
@@ -38,10 +41,7 @@ h2
 	color: #ccc;
 }
 
-#drop{
-	
-	float: left;
-}
+
 
 #hover{
 	position: absolute;
