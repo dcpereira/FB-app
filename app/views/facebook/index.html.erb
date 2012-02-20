@@ -1,7 +1,7 @@
 <h2> Friend Wall Statistics </h2>
 	<p> Please select a friend to analyze: </p>
   <%= friend_select %>
-  <form><input type='button' value="Analyze Friend's Wall" id='analyze_button'/></form>
+  <form><input type='submit' value="Analyze Friend's Wall" id='analyze_button'/></form>
 	<div id='posts_content'>
 		<%= render :partial => "fetch_friend_posts" %>
 	</div>
