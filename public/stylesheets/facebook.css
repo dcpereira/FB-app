@@ -8,7 +8,6 @@ background-color:white;
 -moz-box-shadow: -5px -5px 5px #888;
 -webkit-box-shadow: -5px -5px 5px #888;
 box-shadow: -5px -5px 5px #888;
-z-index:10;
 }
 
 
@@ -19,7 +18,7 @@ body{
 
 div.graph
 {
-	position: absolute;
+	position: relative;
 	margin-left: 290px;
 	margin-top: 20px;
 	width: 750px;
