@@ -5,9 +5,9 @@ width:700px;
 -moz-border-radius: 15px;
 border-radius: 15px;*/
 background-color:white;
--moz-box-shadow: -5px -5px 5px #888;
--webkit-box-shadow: -5px -5px 5px #888;
-box-shadow: -5px -5px 5px #888;
+-moz-box-shadow: 0 0 5px 5px #888;
+-webkit-box-shadow: 0 0 5px 5px#888;
+box-shadow: 0 0 5px 5px #888;
 padding:5em;
 }
 
@@ -20,9 +20,9 @@ body{
 
 div.graph
 {
-	position: relative;
-	margin-left: 1px;
-	margin-top: 20px;
+	position: absolute;
+	right: 20px;
+	top: 20px;
 	width: 750px;
 	height: 410px;
 /*	border: 1px dashed gainsboro;
