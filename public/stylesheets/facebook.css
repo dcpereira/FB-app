@@ -1,23 +1,43 @@
 div#main-content {
-position: absolute;
-left: 25%;
-width: 680px;
-/*-webkit-border-radius: 15px;
--moz-border-radius: 15px;
-border-radius: 15px;*/
-background-color:white;
--moz-box-shadow: 0 0 5px 5px #888;
--webkit-box-shadow: 0 0 5px 5px#888;
-box-shadow: 0 0 5px 5px #888;
-padding:5em;
+	position: absolute;
+	left: 25%;
+	width: 680px;
+	/*-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;*/
+
+}
+
+#button{
+	position:relative;
+	left: 300px;
+	top: 10px;
+}
+
+#login_content{
+	position: absolute;
+	left: 25%;
+	width: 680px;
+	background-color:white;
+	-moz-box-shadow: 0 0 5px 5px #888;
+	-webkit-box-shadow: 0 0 5px 5px#888;
+	box-shadow: 0 0 5px 5px #888;
+	padding:5em;
 }
 
 
 body{
-	
 	background-image:url('../images/back.png');
 	background-repeat:repeat;
 }
+
+
+fb_button_out
+{
+float:right;
+}
+
+/*Graph + Graph accessories position css*/
 
 div.graph
 {
@@ -42,12 +62,6 @@ h2
 	clear: both;
 	color: #ccc;
 }
-
-fb_button_out
-{
-float:right;
-}
-
 
 
 #hover_percentile{
