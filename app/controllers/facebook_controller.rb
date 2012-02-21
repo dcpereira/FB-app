@@ -12,15 +12,15 @@ class FacebookController < ApplicationController
   end
   
   def fetch_posts
-    @sel_friend = params[:selected_friend]
+    @sel_friend = params[:friend_name]
     posts = @graph.fql_query("
           SELECT fromid 
           FROM comment 
           WHERE post_id IN 
             (SELECT post_id 
              FROM stream 
-             WHERE source_id = '#{@sel_friend}'  limit 300) 
-             AND fromid != '#{@sel_friend}'
+             WHERE source_id = '#{params[:selected_friend]}'  limit 300) 
+             AND fromid != '#{params[:selected_friend]}'
     ")
     commenter_ids = []
     stats = Hash.new(0)
