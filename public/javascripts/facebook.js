@@ -42,7 +42,8 @@ $(document).ready(function() {
 		}
 		else
 		  {
-		  alert("Oops - This friend hasn't had any comments for a very long time! Try another.");
+				$('chart_head').hide();
+		  	alert("Oops - This friend hasn't had any comments for a very long time! Try another.");
 		  }
 	})
 	    .error(function() { 
