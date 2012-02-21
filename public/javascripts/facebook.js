@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	var counter = 0;
 	$('#friend_selector').change(function(){
 	$('#in_p').show();
 	$('#posts_content').hide();
