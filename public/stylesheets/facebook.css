@@ -22,7 +22,7 @@ body{
 div.graph
 {
 	position: relative;
-	left: -15px;
+	left: -55px;
 	top: 40px;
 	width: 750px;
 	height: 410px;
@@ -54,12 +54,12 @@ float:right;
 	text-align: center;
 	position: relative;
 	bottom: 250px;
-	left:270px;
+	left:240px;
 }
 
 #hover_name{
 	text-align: right;
 	position: relative;
 	bottom: 224px;
-	left:275px;
+	left:245px;
 }
