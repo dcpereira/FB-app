@@ -1,20 +1,21 @@
 $(document).ready(function() {
 	$('#friend_selector').change(function(){
-	$('#in_p').show();
-	$('#posts_content').hide();
+	$('#in_p').show(); //show progress bars running, to let user know the search is taking place
+	$('#posts_content').hide(); 
 	var selected_friend= $("#friend_selector option:selected").val();	
 	var friend_name = $("#friend_selector option:selected").text();	
 	$.post("/facebook/fetch_posts", {selected_friend: selected_friend, friend_name: friend_name}, function(){
 		
 	var data_string = $("#chart_data").attr("value");
 	 if((data_string != "") && (typeof data_string != "undefined") && (data_string != null)){
-			$('chart_head').show();
+			$('chart_head').show(); // if data is available for a chart to be rendered - then display chart heading along with chart( in ajax functionality)
+			// value is set as a string, this needs to be converted to an array and the elemnts need to be parsed for calculations to be made to plot the chart.
 			data_string = data_string.slice(0, -1);
 			var array = data_string.split(",");
 			var data = [];
 			var counter = 0;
 			for(var i = 0; i<array.length-1; i++){
-			  data[counter] = { label: ""+array[i], data: parseInt(array[i+1]) }
+			  data[counter] = { label: ""+array[i], data: parseInt(array[i+1]) } //creating [label : object, data: object] format for plotting library
 				counter++;
 				i++;
 			}
@@ -42,11 +43,11 @@ $(document).ready(function() {
 		}
 		else
 		  {
-				$('chart_head').hide();
+				$('chart_head').hide(); // if no data to render chart - don't display heading as chart won't be rendered either.
 		  	alert("Oops - This friend hasn't had any comments for a very long time! Try another.");
 		  }
 	})
-	    .error(function() { 
+	    .error(function() { // if request timesout or any req error occurrs - The user is notified.
 				alert("Request Error - There seems to be a connection error. Please try again later."); 
 				$('#in_p').hide();
 		});

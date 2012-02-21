@@ -9,6 +9,7 @@ module FacebookHelper
   end
 
   def friend_select
+    # creates drop down - using array "ID("select" option's value), Name("select" option's text)" pairs
     friends = []
     @friends.each do |f|
       friends << [f['name'], f['id']]
