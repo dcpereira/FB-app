@@ -7,7 +7,7 @@ class User
   end
 
   def get_friends
-    @friends ||= @graph.get_connections(uid,'friends')
+    @friends ||= graph.get_connections(uid,'friends')
   end
 
 end

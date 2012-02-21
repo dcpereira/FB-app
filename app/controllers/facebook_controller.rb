@@ -2,11 +2,10 @@ class FacebookController < ApplicationController
 
   before_filter :facebook_auth
   before_filter :require_login, :except => :login
-
   helper_method :logged_in?, :current_user
   
   def index
-    @friends = current_user.get_friends
+    @friends = current_user.get_friends 
   end
 
   def login    
@@ -19,7 +18,7 @@ class FacebookController < ApplicationController
           WHERE post_id IN 
             (SELECT post_id 
              FROM stream 
-             WHERE source_id = '#{params[:selected_friend]}'  limit 100) 
+             WHERE source_id = '#{params[:selected_friend]}'  limit 300) 
              AND fromid != '#{params[:selected_friend]}'
     ")
     commenter_ids = []
@@ -38,7 +37,6 @@ class FacebookController < ApplicationController
     unsorted_statistics = []
     names.each do |name|
       unsorted_statistics << [stats[name['uid']], name['name']]
-      # @statistics << "#{name['name']}," << "#{stats[name['uid']]},"
     end
     unsorted_statistics.sort!.reverse!
     unsorted_statistics.first(10).each {|a| @statistics << "#{a[1]}," << "#{a[0]},"}    
