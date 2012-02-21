@@ -1,7 +1,8 @@
 $(document).ready(function() {
 	$('#friend_selector').change(function(){
 	$('#in_p').show(); //show progress bars running, to let user know the search is taking place
-	$('#posts_content').hide(); 
+	$('#posts_content').hide();
+	$('chart_head').hide(); 
 	var selected_friend= $("#friend_selector option:selected").val();	
 	var friend_name = $("#friend_selector option:selected").text();	
 	$.post("/facebook/fetch_posts", {selected_friend: selected_friend, friend_name: friend_name}, function(){
