@@ -7,6 +7,6 @@ $(document).ready(function() {
 	    .error(function() { 
 				alert("Request Error - There seems to be a connection error. Please try again later."); 
 				$('#in_p').hide();
-		})
+		});
 	});
 });
