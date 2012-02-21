@@ -6,6 +6,7 @@ class User
     @uid = uid
   end
 
+  #Gets all friends of user who logged in.
   def get_friends
     @friends ||= graph.get_connections(uid,'friends')
   end
