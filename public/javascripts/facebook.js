@@ -51,4 +51,23 @@ $(document).ready(function() {
 				$('#in_p').hide();
 		});
 	});
+	
+	function pieHover(event, pos, obj) 
+	{
+		if (!obj)
+	                return;
+		percent = parseFloat(obj.series.percent).toFixed(2);
+		$("#hover_percentile").html('<span style="text-align: center; margin-left: 250; font-size: 25px; font-weight: bold; color: '+obj.series.color+'">'+percent+'%</span>');
+
+		$("#hover_name").html('<span style="text-align: center; margin-left: 250; font-size: 15px; font-weight: bold; color: '+obj.series.color+'">'+obj.series.label+'</span>');
+	}
+
+	function pieClick(event, pos, obj) 
+	{
+		if (!obj)
+	                return;
+		percent = parseFloat(obj.series.percent).toFixed(2);
+		alert(''+obj.series.label+': '+percent+'%');
+	}
+	
 });

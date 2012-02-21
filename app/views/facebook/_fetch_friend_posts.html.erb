@@ -2,7 +2,6 @@
 	<div  id='chart_div'>
 		<input type="hidden" id ='chart_data' value="<%= @statistics %>" />
 	</div>
-
 	<h2 id='chart_head'><u>Top ranking comment poster's on <%= @sel_friend %>'s wall:</u>
 		<p style='font-size: 0.5em;'>Please hover over or click graph sections for more info.</p>
 	</h2>
@@ -16,24 +15,3 @@
 <% end %>
 
 <p><%= @statistics_unsorted %></p>
-
-
-<script type="text/javascript">
-function pieHover(event, pos, obj) 
-{
-	if (!obj)
-                return;
-	percent = parseFloat(obj.series.percent).toFixed(2);
-	$("#hover_percentile").html('<span style="text-align: center; margin-left: 250; font-size: 25px; font-weight: bold; color: '+obj.series.color+'">'+percent+'%</span>');
-	
-	$("#hover_name").html('<span style="text-align: center; margin-left: 250; font-size: 15px; font-weight: bold; color: '+obj.series.color+'">'+obj.series.label+'</span>');
-}
-
-function pieClick(event, pos, obj) 
-{
-	if (!obj)
-                return;
-	percent = parseFloat(obj.series.percent).toFixed(2);
-	alert(''+obj.series.label+': '+percent+'%');
-}
-</script>
