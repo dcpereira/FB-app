@@ -5,7 +5,7 @@ class FacebookController < ApplicationController
   helper_method :logged_in?, :current_user
   
   def index
-    @friend = Hash.new(0)
+    @friends = Hash.new(0)
     @friends['prompt'] = "---Select---"
     @friends << current_user.get_friends 
   end
