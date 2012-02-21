@@ -3,14 +3,15 @@
 		<input type="hidden" id ='chart_data' value="<%= @statistics %>" />
 	</div>
 
-	<h2 id='chart_head'><u>Top ranking comment poster's on <%= @sel_friend %>'s wall:</u></h2>
-	<br/><br/>
+	<h2 id='chart_head'><u>Top ranking comment poster's on <%= @sel_friend %>'s wall:</u>
+		<p style='font-size: 0.5em;'>Please hover over or click graph sections for more info.</p>
+	</h2>
+	<br/>
 	<div id='wait'></div>
 		<div id="interactive" class="graph"></div>
 		<label for="interactive">
 		<div id="hover_percentile"></div>			
 		<div id="hover_name"></div>
-		<div><p>Please hover over or click graph sections for more info.</p></div>
 		</label>
 <% end %>
 
