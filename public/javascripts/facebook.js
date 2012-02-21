@@ -8,7 +8,8 @@ $(document).ready(function() {
 		
 	var data_string = $("#chart_data").attr("value");
 	 if((data_string != "") && (typeof data_string != "undefined") && (data_string != null)){
-			$('chart_head').show(); // if data is available for a chart to be rendered - then display chart heading along with chart( in ajax functionality)
+			$('chart_head').show(); 
+			// if data is available for a chart to be rendered - then display chart heading along with chart( in ajax functionality)
 			// value is set as a string, this needs to be converted to an array and the elemnts need to be parsed for calculations to be made to plot the chart.
 			data_string = data_string.slice(0, -1);
 			var array = data_string.split(",");
