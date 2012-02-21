@@ -1,6 +1,4 @@
 div#main-content {
-/*margin: auto 300px 0.75em;
-*/
 position: absolute;
 left: 25%;
 width: 680px;
@@ -28,8 +26,7 @@ div.graph
 	top: 40px;
 	width: 750px;
 	height: 410px;
-/*	border: 1px dashed gainsboro;
-*/}
+}
 
 label
 {
@@ -56,7 +53,7 @@ float:right;
 #hover_percentile{
 	text-align: center;
 	position: relative;
-	bottom: 253px;
+	bottom: 250px;
 	left:270px;
 }
 
@@ -64,5 +61,5 @@ float:right;
 	text-align: right;
 	position: relative;
 	bottom: 220px;
-	left:275px;
+	left:278px;
 }
