@@ -13,6 +13,6 @@ module FacebookHelper
     @friends.each do |f|
       friends << [f['name'], f['id']]
     end 
-      select 'friend', options_for_select(friends.sort), :prompt => "--- Select ---", :id => 'friend_selector'
+      select 'friend', options_for_select(friends.sort), {:prompt => "--- Select ---", :id => 'friend_selector'}
   end
 end
