@@ -20,7 +20,7 @@
 $(document).ready(function() {
 
 	var data_string = $("#chart_data").attr("value");
- if((data_string != "") && (typeof data_string != "undefined") && (data_string != null) || (counter == 0) ){
+ if((data_string != "") && (typeof data_string != "undefined") && (data_string != null)){
 		counter++;
 		data_string = data_string.slice(0, -1);
 		var array = data_string.split(",");
