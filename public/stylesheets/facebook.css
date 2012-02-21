@@ -1,5 +1,8 @@
 div#main-content {
-margin: auto 300px 0.75em;
+/*margin: auto 300px 0.75em;
+*/
+position: absolute;
+left: 33%;
 width: 680px;
 /*-webkit-border-radius: 15px;
 -moz-border-radius: 15px;
