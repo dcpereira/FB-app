@@ -5,7 +5,9 @@ $(document).ready(function() {
 	var selected_friend= $("#friend_selector option:selected").val();	
 	var friend_name = $("#friend_selector option:selected").text();	
 	$.post("/facebook/fetch_posts", {selected_friend: selected_friend, friend_name: friend_name}, function(){
-		var data_string = $("#chart_data").attr("value");
+		
+	var data_string = $("#chart_data").attr("value");
+	 if((data_string != "") && (typeof data_string != "undefined") && (data_string != null)){
 			$('chart_head').show();
 			data_string = data_string.slice(0, -1);
 			var array = data_string.split(",");
@@ -37,6 +39,11 @@ $(document).ready(function() {
 			});
 			$("#interactive").bind("plothover", pieHover);
 			$("#interactive").bind("plotclick", pieClick);
+		}
+		else
+		  {
+		  alert("Oops - This friend hasn't had any comments for a very long time! Try another.");
+		  }
 	})
 	    .error(function() { 
 				alert("Request Error - There seems to be a connection error. Please try again later."); 
