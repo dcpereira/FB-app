@@ -22,7 +22,7 @@ class FacebookController < ApplicationController
           WHERE post_id IN 
             (SELECT post_id 
              FROM stream 
-             WHERE source_id = '#{params[:selected_friend]}'  limit 120) 
+             WHERE source_id = '#{params[:selected_friend]}'  limit 150) 
              AND fromid != '#{params[:selected_friend]}' 
     ") # "The AND fromid != '#{params[:selected_friend]}" in this query removes the users own ID. 
     commenter_ids = []
